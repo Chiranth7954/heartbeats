@@ -9,7 +9,6 @@ genre = "rock"
 userLength = 15 * 60
 type = "ramping"
 
-
 with open('song.json') as songData:
 	data = json.load(songData)
 
