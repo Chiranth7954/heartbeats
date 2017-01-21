@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 from pymongo import MongoClient
 from bs4 import BeautifulSoup
 import requests
+import math
 
 client = MongoClient()
 db = client['primer']
@@ -18,15 +20,23 @@ while current_bpm < max_bpm:
     for row in rows:
         all_songs = row.find_all('td')
         trash1, artist, song, time, bpm, year, genre, trash2, trash3 = all_songs
-        result = db.songs.insert_one(
-            {
-                "artist": artist.text,
-                "song": song.text,
-                "time": time.text,
-                "bpm": bpm.text,
-                "year": year.text,
-                "genre": genre.text
-            }
-        )
+
+        if(time.text.strip().split(":") != [u'TIME']):
+            (minutes, seconds) = time.text.strip().split(":")
+            seconds = int(seconds)
+            seconds += int(minutes)*60
+
+            bpm = float(bpm.text.strip())
+
+            result = db.songs.insert_one(
+                {
+                    "artist": artist.text,
+                    "song": song.text,
+                    "time": seconds,
+                    "bpm": bpm,
+                    "year": year.text,
+                    "genre": genre.text
+                }
+            )
 
     current_bpm += 1
