@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Heartbeats Music</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type = "text/css" href="style.css">
+</head>
+
+<style>
+h1 {
+    font-family: "Courier New";
+    font-size: 40px;
+}
+h2 {
+    font-family: "Helvetica";
+    font-size: 35px;
+}
+h3 {
+    font-family: "Helvetica";
+    font-size: 15px;
+}
+td {
+    font-family: "Liberation Sans";
+    font-size: 15px;
+}
+p {
+    font-family: "Helvetica";
+}
+.header {
+    background-color: #00CC66;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.top {
+    background-color: #00CC66;
+    color: #FFFFFF;
+    padding-top: 0px;
+    padding-bottom: 50px;
+}
+.middle {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.bottom {
+    background-color: #FFFFFF;
+    color: #555555;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container-fluid {
+    text-align: center;
+}
+td {
+    padding: 20px;
+    text-align: left;
+    opacity: 1;
+}
+/* FIXME later @opacity
+td:hover {
+    opacity: 0.8;
+}
+*/
+#images img:hover {
+    opacity: 0.5;
+}
+
+</style>
+
+<body>
+
+   <div class="container-fluid header">
+        <h1 align="center">
+        <span class="glyphicon glyphicon-headphones"></span>
+        Heartbeats Music
+        <span class="glyphicon glyphicon-music"></span>
+        </h1>
+    </div>
+
+    <div class="container-fluid top">
+        <form action="heartbeats.asp" method="get"> <!-- THIS IS THE ONLY PIECE OF CODE YOU NEED FOR HTTP BULLSHIT? rip gl -->
+        <br><br><br><br><table style="width:100%">
+        <tr>
+            <td></td><td colspan="2" style="text-align:center">
+            <h3>What genre of music do<br>you prefer to work out to?</h3>
+            </td>
+            <td></td>
+
+            <td colspan="2" style="text-align:center">
+            <h3>How long is the<br>workout going to be?</h3>
+            </td>
+            <td></td>
+
+            <td colspan="2" style="text-align:center">
+            <h3>What is the workout<br>intensity trend for today?</h3>
+            </td>
+            <td></td>
+
+            <td colspan="2" style="text-align:center">
+            <h3>What is the workout cadence<br>going to be? (80-200 beats/minute)</h3>
+            </td>
+        </tr>
+        <tr>
+            <td></td><td>
+            <input type="checkbox" name="genre" value="Alt"> Alternative<br>
+            <input type="checkbox" name="genre" value="Classical"> Classical<br>
+            <input type="checkbox" name="genre" value="Country"> Country<br>
+            <input type="checkbox" name="genre" value="EDM"> EDM<br>
+            <input type="checkbox" name="genre" value="Folk"> Folk<br>
+            </td>
+            <td>
+            <input type="checkbox" name="genre" value="Jazz"> Jazz<br>
+            <input type="checkbox" name="genre" value="Pop"> Pop<br>
+            <input type="checkbox" name="genre" value="Rap"> Rap<br>
+            <input type="checkbox" name="genre" value="Rock"> Rock<br>
+            <input type="checkbox" name="genre" value="Other"> Other<br>
+            </td>
+            <td></td>
+
+            <td>
+            <input type="radio" name="length" value="10"> &lt 10 minutes<br>
+            <input type="radio" name="length" value="20"> 10-20 minutes<br>
+            <input type="radio" name="length" value="30"> 20-30 minutes<br>
+            <input type="radio" name="length" value="40"> 30-40 minutes<br>
+            <input type="radio" name="length" value="50"> 40-50 minutes<br>
+            </td>
+            <td>
+            <input type="radio" name="length" value="60"> 50-60 minutes<br>
+            <input type="radio" name="length" value="70"> 60-70 minutes<br>
+            <input type="radio" name="length" value="80"> 70-80 minutes<br>
+            <input type="radio" name="length" value="90"> 80-90 minutes<br>
+            <input type="radio" name="length" value="100"> > 90 minutes<br>
+            </td>
+            <td></td>
+
+            <td>
+            <input type="radio" name="pattern" value="light"> Light<br>
+            <input type="radio" name="pattern" value="moderate"> Moderate<br>
+            </td>
+            <td>
+            <input type="radio" name="pattern" value="heavy"> Heavy<br>
+            <input type="radio" name="pattern" value="extreme"> Extreme<br>
+            </td>
+            <td></td>
+
+            <td colspace="2" style="text-align:center">
+            <input type="number" name="cadence" placeholder="140" min="80" max="200" style="color:black"><br>
+            </td>
+        </tr>
+        </table><br><br><br><br>
+
+            <h3>Go ahead and submit your preferences.</h3><br><br>
+            <input type="submit" value="Submit" style="color:black"><br><br>
+        </form>
+    </div>
+
+    <div class="container-fluid middle">
+        <h2>What's Going On Here?</h2>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="display:inline-block">
+            <img src="propic.jpg" class="img-responsive img-circle" width="25%" length="25%" style="display:inline" alt="Logo">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="display:inline-block">
+            <h3><i>User data is compiled into a Spotify thingie to make you sweat till you drop.
+            User data is compiled into a Spotify thingie to make you sweat till you drop.
+            User data is compiled into a Spotify thingie to make you sweat till you drop.</i>
+            </h3>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="display:inline-block">
+            <img src="propic.jpg" class="img-responsive img-circle" width="25%" length="25%" style="display:inline" alt="Logo">
+        </div>
+    </div>
+
+    <div class="container-fluid bottom">
+        <h2>Our Interdisciplinary Team of Dedicated Freshman</h2><br>
+        <div id ="images">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img src="head1.jpg" class="img-responsive img-circle" style="width:100%" alt="Nathan">
+                <br><p><b>Nathan Narasimhan</b><br>University of Illinois<br>Computer Engineering</p>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img src="head2.jpg" class="img-responsive img-circle" style="width:100%" alt="Naveed">
+                <br><p><b>Naveed Riaziat</b><br>Purdue University<br>Mechanical Engineering</p>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img src="head3.jpg" class="img-responsive img-circle" style="width:100%" alt="Ema">
+                <br><p><b>Ema Milojkovic</b><br>University of Illinois<br>Computer Science</p>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img src="head4.jpg" class="img-responsive img-circle" style="width:100%" alt="Chiranth">
+                <br><p><b>Chiranth Kishore</b><br>Purdue University<br>Mechanical Engineering</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
