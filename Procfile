@@ -1,1 +1,1 @@
-web: gunicorn algorithm:app --log-file=-
+web: gunicorn algorithm:app --log-file -
