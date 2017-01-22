@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from flask_oauth import OAuth
+from makeSpotifyPlaylist import spotifyOAuth
 
 oauth = OAuth()
 
@@ -8,6 +9,10 @@ from credentials import *
 from flask import session
 from flask import Flask
 from flask.ext.pymongo import PyMongo
+import webbrowser
+
+spotifyOAuth()
+
 app = Flask(__name__, static_url_path='')
 mongo = PyMongo(app)
 
@@ -18,14 +23,16 @@ def get_gFit_token(token=None):
 
 @app.route('/')
 def hello():
+
     return 'success'
 
 @app.route('/login')
 def login():
-    return gFit.authorize(callback='http://localhost:5000/callback')
+    return gFit.authorize(callback='http://localhost:5000/login')
 
 @app.route('/callback')
 def callback():
+
     return '!!!!'
 
 @app.route('/index')
