@@ -1,2 +1,6 @@
 credentials.py
 SpotifyCred.py
+spotifyCredentials.py
+.venv
+*.pyc
+venv/
