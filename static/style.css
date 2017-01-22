@@ -1,59 +1,74 @@
-h1 {
-    font-family: "Courier New";
-    font-size: 40px;
-}
-h2 {
-    font-family: "Helvetica";
-    font-size: 35px;
-}
-h3 {
-    font-family: "Helvetica";
-    font-size: 15px;
-}
-td {
-    font-family: "Liberation Sans";
-    font-size: 15px;
-}
-p {
-    font-family: "Helvetica";
-}
-.header {
-    background-color: #00CC66;
-    color: #FFFFFF;
-    padding-top: 20px;
-    padding-bottom: 0px;
-}
-.top {
-    background-color: #00CC66;
-    color: #FFFFFF;
-    padding-top: 0px;
-    padding-bottom: 50px;
-}
-.middle {
-    background-color: #333333;
-    color: #FFFFFF;
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
-.bottom {
-    background-color: #FFFFFF;
-    color: #555555;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.container-fluid {
-    text-align: center;
-}
-td {
-    padding: 20px;
-    text-align: left;
-    opacity: 1;
-}
-/* FIXME later @opacity
-td:hover {
-    opacity: 0.8;
-}
-*/
-#images img:hover {
-    opacity: 0.5;
-}
+    h1 {
+        font-family: 'Mako', sans-serif;
+        font-size: 40px;
+        text-align: center;
+    }
+    h2 {
+        font-family: "Helvetica";
+        font-size: 35px;
+    }
+    h3 {
+        font-family: "Mako","Helvetica Neue","Helvetica","Arial";
+        font-size: 15px;
+    }
+    h4 {
+        font-family: "Arial Bold";
+        font-size: 20px;
+    }
+    td {
+        font-family: "Liberation Sans";
+        font-size: 15px;
+    }
+    p {
+        font-family: "LeagueGothic","Helvetica Neue","Helvetica","Arial";
+    }
+    .header { 
+        background-color: #00CC66;
+        color: #FFFFFF;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+    .top { 
+        background-color: #00CC66;
+        color: #FFFFFF;
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+    .middle { 
+        background-color: #333333;
+        color: #FFFFFF;
+        padding-top: 10px;
+        padding-bottom: 30px; 
+    }
+    .bottom { 
+        background-color: #FFFFFF;
+        color: #555555;
+        padding-top: 20px;
+        padding-bottom: 20px; 
+    }
+    .container-fluid {
+        text-align: center;
+    }
+    td {
+        padding: 20px;
+        text-align: left;
+        opacity: 1;
+    }
+    a {
+        color: #FFFFFF;
+    }
+    a:link {
+        color: #FFFFFF;
+    }
+    a:visited {
+        color: #FFFFFF;
+    }
+    a:hover {
+        opacity = 0.5;
+    }
+    #g1 :hover {
+        opacity: 0.8;
+    }
+    #images img:hover {
+        opacity: 0.5;
+    }
