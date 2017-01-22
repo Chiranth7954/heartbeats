@@ -15,13 +15,12 @@ import webbrowser
 from makeSpotifyPlaylist import *
 import algorithm
 import os
-os.system('python algorithm.py')
-
-
-spotifyOAuth(algorithm.uri_links)
 
 app = Flask(__name__, static_url_path='')
 mongo = PyMongo(app)
+
+os.system('python algorithm.py')
+spotifyOAuth(algorithm.uri_links)
 
 @gFit.tokengetter
 def get_gFit_token(token=None):
@@ -49,6 +48,7 @@ def home_page():
     # return 'the index?'
     return app.send_static_file('index.html')
     #return render_template(('index.html'),online_users=online_users)
+
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
