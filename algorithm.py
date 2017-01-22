@@ -8,6 +8,7 @@ db = client['primer']
 with open('form_input.txt') as f:
     content = f.readlines()
 
+
 content = [x.strip() for x in content]
 user_bpm = int(content[0])
 user_genre = content[1]
