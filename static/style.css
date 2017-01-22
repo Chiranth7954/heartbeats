@@ -22,29 +22,29 @@
     p {
         font-family: "LeagueGothic","Helvetica Neue","Helvetica","Arial";
     }
-    .header { 
+    .header {
         background-color: #00CC66;
         color: #FFFFFF;
         padding-top: 20px;
         padding-bottom: 0px;
     }
-    .top { 
+    .top {
         background-color: #00CC66;
         color: #FFFFFF;
         padding-top: 0px;
         padding-bottom: 10px;
     }
-    .middle { 
+    .middle {
         background-color: #333333;
         color: #FFFFFF;
         padding-top: 10px;
-        padding-bottom: 30px; 
+        padding-bottom: 30px;
     }
-    .bottom { 
+    .bottom {
         background-color: #FFFFFF;
         color: #555555;
         padding-top: 20px;
-        padding-bottom: 20px; 
+        padding-bottom: 20px;
     }
     .container-fluid {
         text-align: center;
