@@ -35,6 +35,12 @@ def callback():
 
     return '!!!!'
 
+
+@app.route('/callback')
+def callback():
+
+    return '!!!!'
+
 @app.route('/index')
 def home_page():
     #online_users = mongo.db.users.find({'online': True})
