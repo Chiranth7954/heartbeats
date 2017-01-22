@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
+
 from flask_oauth import OAuth
-from makeSpotifyPlaylist import spotifyOAuth
+
 
 oauth = OAuth()
 
@@ -11,7 +12,13 @@ from flask import Flask
 from flask.ext.pymongo import PyMongo
 import webbrowser
 
-spotifyOAuth()
+from makeSpotifyPlaylist import *
+import algorithm
+import os
+os.system('python algorithm.py')
+
+
+spotifyOAuth(algorithm.uri_links)
 
 app = Flask(__name__, static_url_path='')
 mongo = PyMongo(app)
@@ -35,11 +42,6 @@ def callback():
 
     return '!!!!'
 
-
-@app.route('/callback')
-def callback():
-
-    return '!!!!'
 
 @app.route('/index')
 def home_page():

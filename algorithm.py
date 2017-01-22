@@ -2,16 +2,16 @@ import json
 from pymongo import MongoClient
 from spotifyFindSong import *
 
-client = MongoClient()
+client = MongoClient("mongodb://0.tcp.ngrok.io:16289/songs")
 db = client['primer']
 
-with open('form_input.txt') as f:
-    content = f.readlines()
+with open('form_input.txt', 'r+') as f:
+    content = f.read().split("|")
 
 
 content = [x.strip() for x in content]
 user_bpm = int(content[0])
-user_genre = content[1]
+user_genre = content[1].split(', ')
 user_workout_length = int(content[2]) * 60   # convert minutes to seconds
 user_workout = content[3]
 
@@ -21,10 +21,10 @@ song_bpm = 0
 current_workout_length = 0
 uri_links = []
 
-if(user_workout == "constant"):
+if(user_workout == "constant/n"):
     query = {
         'bpm': int(user_bpm),
-        'genre': str(user_genre)
+        'genre': {'$or': user_genre}
     }
     valid_songs = db.songs.find(query)
 
